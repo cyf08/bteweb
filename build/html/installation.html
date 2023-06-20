@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Installation &mdash; GiftBTE v1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Running GiftBTE" href="running.html" />
+    <link rel="prev" title="2. Download" href="download.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GiftBTE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirement">3.1 Requirement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-and-compile">3.2 Install and compile</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-install-all-required-packages">Step 1. Install all required packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-download-source">Step 2. Download source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-build-by-cmake">Step 3. Build by CMake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-run-example">Step 4. Run example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running GiftBTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">6. Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">8. Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiftBTE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">3. Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/installation.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>3. Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<section id="requirement">
+<h2>3.1 Requirement<a class="headerlink" href="#requirement" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>C++ compiler (gcc is recommended)</p></li>
+<li><p>Cmake</p></li>
+<li><p>MPI library (openmpi is recommended)</p></li>
+<li><p>Linux environment is recommended</p></li>
+</ul>
+</section>
+<section id="install-and-compile">
+<h2>3.2 Install and compile<a class="headerlink" href="#install-and-compile" title="Permalink to this heading"></a></h2>
+<section id="step-1-install-all-required-packages">
+<h3>Step 1. Install all required packages<a class="headerlink" href="#step-1-install-all-required-packages" title="Permalink to this heading"></a></h3>
+<p>All packages are widely used packages. The installation of these packages can be easily found in web.</p>
+<p><strong>Ensure that the C++ compiler is installed</strong></p>
+<p>Type in command line</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">g++</span> <span class="pre">-v</span></code></p>
+<p>Correct output like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">gcc</span> <span class="pre">version</span> <span class="pre">x.x.x</span> <span class="pre">xxxxxx</span></code></p>
+<p><strong>Ensure that the MPI library is installed</strong></p>
+<p>Type in command line</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">which</span> <span class="pre">mpirun</span></code></p>
+<p>Correct output like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">/usr/bin/mpirun</span></code></p>
+<p><strong>Ensure that the Cmake is installed</strong></p>
+<p>Type in command line</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">which</span> <span class="pre">cmake</span></code></p>
+<p>Correct output like:</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">/usr/bin/cmake</span></code></p>
+</section>
+<section id="step-2-download-source">
+<h3>Step 2. Download source<a class="headerlink" href="#step-2-download-source" title="Permalink to this heading"></a></h3>
+<p>You can download the package from the git repository as: <a class="reference external" href="https://github.com/Gift-BTE-developer/Gift-BTE.git">https://github.com/Gift-BTE-developer/Gift-BTE.git</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">unzip</span> <span class="pre">GiftBTE-master.zip</span></code></p>
+<p>Or directly clone the repository by git (may need installation)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/Gift-BTE-developer/Gift-BTE.git
+$ git Checkout master
+</pre></div>
+</div>
+</section>
+<section id="step-3-build-by-cmake">
+<h3>Step 3. Build by CMake<a class="headerlink" href="#step-3-build-by-cmake" title="Permalink to this heading"></a></h3>
+<p>Type in the command line under the GiftBTE folder\</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd GiftBTE
+$ cmake -B cpu-build -S.  -DCMAKE_BUILD_TYPE=Release
+$ cd cpu-build
+$ make
+</pre></div>
+</div>
+<p>Correct output in command line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">The</span> <span class="n">CXX</span> <span class="n">compiler</span> <span class="n">identification</span> <span class="ow">is</span> <span class="n">GNU</span> <span class="mf">8.3.1</span>
+<span class="o">--</span> <span class="n">The</span> <span class="n">C</span> <span class="n">compiler</span> <span class="n">identification</span> <span class="ow">is</span> <span class="n">GNU</span> <span class="mf">8.3.1</span>
+<span class="o">--</span> <span class="n">The</span> <span class="n">Fortran</span> <span class="n">compiler</span> <span class="n">identification</span> <span class="ow">is</span> <span class="n">GNU</span> <span class="mf">8.3.1</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">CXX</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">CXX</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span> <span class="o">-</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Check</span> <span class="k">for</span> <span class="n">working</span> <span class="n">CXX</span> <span class="n">compiler</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">c</span><span class="o">++</span> <span class="o">-</span> <span class="n">skipped</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">CXX</span> <span class="nb">compile</span> <span class="n">features</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">CXX</span> <span class="nb">compile</span> <span class="n">features</span> <span class="o">-</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">C</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">C</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span> <span class="o">-</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Check</span> <span class="k">for</span> <span class="n">working</span> <span class="n">C</span> <span class="n">compiler</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">cc</span> <span class="o">-</span> <span class="n">skipped</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">C</span> <span class="nb">compile</span> <span class="n">features</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">C</span> <span class="nb">compile</span> <span class="n">features</span> <span class="o">-</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">Fortran</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span>
+<span class="o">--</span> <span class="n">Detecting</span> <span class="n">Fortran</span> <span class="n">compiler</span> <span class="n">ABI</span> <span class="n">info</span> <span class="o">-</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Check</span> <span class="k">for</span> <span class="n">working</span> <span class="n">Fortran</span> <span class="n">compiler</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gfortran</span> <span class="o">-</span> <span class="n">skipped</span>
+<span class="o">--</span> <span class="n">Checking</span> <span class="n">whether</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gfortran</span> <span class="n">supports</span> <span class="n">Fortran</span> <span class="mi">90</span>
+<span class="o">--</span> <span class="n">Checking</span> <span class="n">whether</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">gfortran</span> <span class="n">supports</span> <span class="n">Fortran</span> <span class="mi">90</span> <span class="o">-</span> <span class="n">yes</span>
+<span class="o">--</span> <span class="n">Found</span> <span class="n">MPI_C</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">icelake</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="n">centos8</span><span class="o">-</span><span class="n">icelake</span><span class="o">/</span><span class="n">gcc</span><span class="o">-</span><span class="mf">8.3.1</span><span class="o">/</span><span class="n">openmpi</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">-</span><span class="n">me4z4iiamxv3l6efci5wcmjd2pk4rvye</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmpi</span><span class="o">.</span><span class="n">so</span> <span class="p">(</span><span class="n">found</span> <span class="n">version</span> <span class="s2">&quot;3.1&quot;</span><span class="p">)</span> 
+<span class="o">--</span> <span class="n">Found</span> <span class="n">MPI_CXX</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">icelake</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="n">centos8</span><span class="o">-</span><span class="n">icelake</span><span class="o">/</span><span class="n">gcc</span><span class="o">-</span><span class="mf">8.3.1</span><span class="o">/</span><span class="n">openmpi</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">-</span><span class="n">me4z4iiamxv3l6efci5wcmjd2pk4rvye</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmpi_cxx</span><span class="o">.</span><span class="n">so</span> <span class="p">(</span><span class="n">found</span> <span class="n">version</span> <span class="s2">&quot;3.1&quot;</span><span class="p">)</span> 
+<span class="o">--</span> <span class="n">Found</span> <span class="n">MPI_Fortran</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">icelake</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="n">centos8</span><span class="o">-</span><span class="n">icelake</span><span class="o">/</span><span class="n">gcc</span><span class="o">-</span><span class="mf">8.3.1</span><span class="o">/</span><span class="n">openmpi</span><span class="o">-</span><span class="mf">4.1.1</span><span class="o">-</span><span class="n">me4z4iiamxv3l6efci5wcmjd2pk4rvye</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">libmpi_usempif08</span><span class="o">.</span><span class="n">so</span> <span class="p">(</span><span class="n">found</span> <span class="n">version</span> <span class="s2">&quot;3.1&quot;</span><span class="p">)</span> 
+<span class="o">--</span> <span class="n">Found</span> <span class="n">MPI</span><span class="p">:</span> <span class="n">TRUE</span> <span class="p">(</span><span class="n">found</span> <span class="n">version</span> <span class="s2">&quot;3.1&quot;</span><span class="p">)</span>  
+<span class="o">--</span> <span class="n">Configuring</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Generating</span> <span class="n">done</span>
+<span class="o">--</span> <span class="n">Build</span> <span class="n">files</span> <span class="n">have</span> <span class="n">been</span> <span class="n">written</span> <span class="n">to</span><span class="p">:</span> <span class="o">/</span><span class="n">dssg</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">acct</span><span class="o">-</span><span class="n">umjbh</span><span class="o">/</span><span class="n">umjbh</span><span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="n">GiftBTE</span><span class="o">/</span><span class="n">cpu</span><span class="o">-</span><span class="n">build</span>
+<span class="p">[</span>  <span class="mi">3</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">utility</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEutility</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">utility</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span>  <span class="mi">7</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libBTEutility</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span>  <span class="mi">7</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTEutility</span>
+<span class="p">[</span> <span class="mi">11</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEAngle</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEAngle</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">BTEAngle</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">15</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libBTEAngle</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">15</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTEAngle</span>
+<span class="p">[</span> <span class="mi">19</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEBand</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEBand</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">BTEBand</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">23</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libBTEBand</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">23</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTEBand</span>
+<span class="p">[</span> <span class="mi">26</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEBoundaryCondition</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEBoundaryCondition</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">BTEBoundaryCondition</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">30</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libBTEBoundaryCondition</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">30</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTEBoundaryCondition</span>
+<span class="p">[</span> <span class="mi">34</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">38</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">COMSOL</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">42</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">oneD</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">46</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">Distribute</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">50</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTEMesh</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">ReadinMesh</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">53</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libBTEMesh</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">53</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTEMesh</span>
+<span class="p">[</span> <span class="mi">57</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">StaticBTESynthetic</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">StaticBTESynthetic</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">StaticBTESynthetic</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">61</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">StaticBTESynthetic</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">StaticBTESynthetic</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">StaticBTESyntheticSolver</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">65</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libStaticBTESynthetic</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">65</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">StaticBTESynthetic</span>
+<span class="p">[</span> <span class="mi">69</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">StaticFourier</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">StaticFourier</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">StaticFourier</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">73</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libStaticFourier</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">73</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">StaticFourier</span>
+<span class="p">[</span> <span class="mi">76</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">TransientBTE</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">TransientBTE</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">transient</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">80</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">TransientBTE</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">TransientBTE</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">TransientSolver</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">84</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libTransientBTE</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">84</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">TransientBTE</span>
+<span class="p">[</span> <span class="mi">88</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">Solution</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">Solution</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">Solution</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span> <span class="mi">92</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">static</span> <span class="n">library</span> <span class="o">../../../</span><span class="n">lib</span><span class="o">/</span><span class="n">libSolution</span><span class="o">.</span><span class="n">a</span>
+<span class="p">[</span> <span class="mi">92</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">Solution</span>
+<span class="p">[</span> <span class="mi">96</span><span class="o">%</span><span class="p">]</span> <span class="n">Building</span> <span class="n">CXX</span> <span class="nb">object</span> <span class="n">src</span><span class="o">/</span><span class="n">CMakeFiles</span><span class="o">/</span><span class="n">BTE_CPU</span><span class="o">.</span><span class="n">dir</span><span class="o">/</span><span class="n">BTEMain</span><span class="o">.</span><span class="n">cpp</span><span class="o">.</span><span class="n">o</span>
+<span class="p">[</span><span class="mi">100</span><span class="o">%</span><span class="p">]</span> <span class="n">Linking</span> <span class="n">CXX</span> <span class="n">executable</span> <span class="o">../../</span><span class="nb">bin</span><span class="o">/</span><span class="n">BTE_CPU</span>
+<span class="p">[</span><span class="mi">100</span><span class="o">%</span><span class="p">]</span> <span class="n">Built</span> <span class="n">target</span> <span class="n">BTE_CPU</span>
+</pre></div>
+</div>
+<p>An executable file BTE_CPU  is created in bin/</p>
+<p>Common error:</p>
+<ul class="simple">
+<li><p>C++ compiler not found: the C++ compiler is not installed</p></li>
+<li><p>MPI not found: the MPI library is not installed</p></li>
+</ul>
+</section>
+<section id="step-4-run-example">
+<h3>Step 4. Run example<a class="headerlink" href="#step-4-run-example" title="Permalink to this heading"></a></h3>
+<p>GiftBTE provides many examples under bin/examples. One can choose an example to test. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd bin
+$ cd examples
+$ cd FinFET
+$ cd 1e-7
+$ mpirun -np 4 ../../../BTE_CPU
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="download.html" class="btn btn-neutral float-left" title="2. Download" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="running.html" class="btn btn-neutral float-right" title="4. Running GiftBTE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Hua Bao&#39;s group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

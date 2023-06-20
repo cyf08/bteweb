@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. About &mdash; GiftBTE v1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Download" href="download.html" />
+    <link rel="prev" title="Welcome to GiftBTE’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GiftBTE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-giftbte">1.1 What is GiftBTE?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#features">1.2 Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#links">1.3 Links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">1.4 License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-cite-giftbte">1.5 How to cite GiftBTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#issues-bug-report">1.6 Issues &amp; Bug report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgment">1.7 Acknowledgment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributors-contact">1.8 Contributors &amp; Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running GiftBTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">6. Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">8. Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiftBTE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">1. About</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/about.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="about">
+<h1>1. About<a class="headerlink" href="#about" title="Permalink to this heading"></a></h1>
+<section id="what-is-giftbte">
+<h2>1.1 What is GiftBTE?<a class="headerlink" href="#what-is-giftbte" title="Permalink to this heading"></a></h2>
+<p>GiftBTE is a powerful tool designed to investigate submicron heat conduction. At the submicron scale, the characteristic length of heat conduction becomes comparable to the phonon mean free path, rendering the macroscopic Fourier’s law inapplicable. Instead, at this scale, the phonon Boltzmann transport equation accurately describes heat conduction. GiftBTE employs numerical methods to solve this equation and simulates submicron heat conduction. It takes phonon properties from first-principles simulations as input and provides a built-in database for some materials. Additionally, GiftBTE offers an interface with two external unstructured mesh generators. The tool is easy to use, as it only requires an environment with g++, MPI, and Cmake.</p>
+</section>
+<section id="features">
+<h2>1.2 Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
+<p><strong>General</strong></p>
+<ul class="simple">
+<li><p>Deterministic solver of phonon Boltzmann transport equation</p></li>
+<li><p>Applicable to any crystalline materials and structures</p></li>
+<li><p>Applicable to steady-state and transient problem</p></li>
+<li><p>Interface to ShengBTE, ALAMODE, GMSH, COMSOL, and Paraview packages</p></li>
+<li><p>Mainly written in C++, parallelized in MPI</p></li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul class="simple">
+<li><p>Computing thermal conductivity of nanostructures such as nano-porous media, superlattice, nanowires, nano-composite</p></li>
+<li><p>Predicting temperature rise in transistors</p></li>
+<li><p>Simulating laser heating process</p></li>
+<li><p>Other submicron heat conduction problems</p></li>
+</ul>
+<p><strong>WorkFlow</strong></p>
+<p><img alt="image0" src="_images/image0.png" /></p>
+<p><strong>Code structure</strong></p>
+</section>
+<section id="links">
+<h2>1.3 Links<a class="headerlink" href="#links" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Documentation: <a class="reference external" href="https://sjtu.feishu.cn/docx/GzB2dXQfaozenFxEtP4cQEJOnKb">Gift-BTE用户文档</a></p></li>
+<li><p>Git repository: <a class="reference external" href="https://github.com/Gift-BTE-developer/Gift-BTE.git">https://github.com/Gift-BTE-developer/Gift-BTE.git</a></p></li>
+</ul>
+</section>
+<section id="license">
+<h2>1.4 License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>This software is distributed under the <strong>GNU General Public License v3.0</strong> license. See the LICENSE.txt file for license rights and limitations.</p>
+</section>
+<section id="how-to-cite-giftbte">
+<h2>1.5 How to cite GiftBTE<a class="headerlink" href="#how-to-cite-giftbte" title="Permalink to this heading"></a></h2>
+<p>Please cite the following article when you use GiftBTE</p>
+</section>
+<section id="issues-bug-report">
+<h2>1.6 Issues &amp; Bug report<a class="headerlink" href="#issues-bug-report" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>If you find a bug or issue related to GiftBTE, please report it at <a class="reference external" href="https://github.com/Gift-BTE-developer/Gift-BTE/issues">Github Issues</a></p></li>
+<li><p>Other questions and suggestions can be posted on the <a class="reference external" href="https://github.com/Gift-BTE-developer/Gift-BTE/discussions">Github Disccusions</a></p></li>
+</ul>
+<p>In either case, please search for the previous questions and read the FAQ page of this document before asking.</p>
+</section>
+<section id="acknowledgment">
+<h2>1.7 Acknowledgment<a class="headerlink" href="#acknowledgment" title="Permalink to this heading"></a></h2>
+<p>This project is/was partially supported by the following projects:</p>
+<ul class="simple">
+<li><p>National Key R &amp; D Project from Ministery of Science and Technology of China (Grant No. 2022YFA1203100)</p></li>
+<li><p>National Natural Science Foundation of China (Grant No. 52122606)</p></li>
+</ul>
+</section>
+<section id="contributors-contact">
+<h2>1.8 Contributors &amp; Contact<a class="headerlink" href="#contributors-contact" title="Permalink to this heading"></a></h2>
+<p>TPEC Lab (Contact: Gift-BTE&#64;outlook.com)</p>
+<p>Website: <a class="reference external" href="https://sites.ji.sjtu.edu.cn/hua-bao/">https://sites.ji.sjtu.edu.cn/hua-bao/</a></p>
+<p>Global Institute of Future Technology (GIFT)</p>
+<p>Shanghai Jiao Tong University</p>
+<p>China</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to GiftBTE’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="download.html" class="btn btn-neutral float-right" title="2. Download" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Hua Bao&#39;s group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

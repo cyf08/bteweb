@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Examples &mdash; GiftBTE v1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Tutorial" href="tutorial.html" />
+    <link rel="prev" title="4. Running GiftBTE" href="running.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GiftBTE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running GiftBTE</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cross-plane-heat-conduction">5.1 Cross-plane heat conduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#in-plane-heat-conduction">5.2 In-plane heat conduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#internal-heat-generation">5.3 Internal heat generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#thermal-transport-across-interfaces">5.4 Thermal transport across interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#one-dimensional-transient-thermal-grating-ttg">5.5 One-dimensional transient thermal grating (TTG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#thermal-conduction-in-nano-porous-media">5.6 Thermal conduction in nano-porous media</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#temperature-profiles-in-fin-field-effect-transistors">5.7 Temperature profiles in Fin field-effect transistors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulations-of-time-domain-thermoreflectance-tdtr-experiment">5.8 Simulations of Time-domain thermoreflectance (TDTR) experiment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">6. Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">8. Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiftBTE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">5. Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/examples.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="examples">
+<h1>5. Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
+<p>The examples folder in bin/ gives input files for some toy problems, including cross-plane heat conduction in Si thin films, in-plane heat conduction in Si thin films, internal heat generation in Si thin films, and thermal transport across Ge-Si interface, thermal conduction in nano-porous media, thermal conduction in silicon Fin field-effect transistors, etc.</p>
+<section id="cross-plane-heat-conduction">
+<h2>5.1 Cross-plane heat conduction<a class="headerlink" href="#cross-plane-heat-conduction" title="Permalink to this heading"></a></h2>
+<p>A square simulation domain with length L for cross-plane heat conduction in Si thin films [1] is shown below: thermalizing boundary conditions with temperatures T₁ and T₂ are set at the left and right boundaries, respectively. The top and bottom boundaries are set as specularly reflecting boundary conditions.</p>
+<p><img alt="image1" src="_images/image1.png" /></p>
+<p>The folder <strong>examples\cross-plane</strong> includes input files for three different Si thin film thicknesses (<strong>L=1e-6, 1e-7, 1e-8 m</strong>). The results (the lattice temperature and heat flux) calculated from GiftBTE verified with analytical solutions are shown below.</p>
+<p><img alt="image2" src="_images/image2.png" /></p>
+</section>
+<section id="in-plane-heat-conduction">
+<h2>5.2 In-plane heat conduction<a class="headerlink" href="#in-plane-heat-conduction" title="Permalink to this heading"></a></h2>
+<p>The simulation domain for in-plane heat conduction in Si thin film [2] with the thickness of L is shown below. Periodic boundary conditions are set at the left and right boundaries with a temperature difference, which induces a temperature gradient over the x direction. The top and bottom boundaries are set as diffusely reflecting boundary conditions.</p>
+<p><img alt="image3" src="_images/image3.png" /></p>
+<p>The folder <strong>examples\in-plane</strong> includes input files for three different Si thin film thicknesses (<strong>L=1e-6, 1e-7, 1e-8 m</strong>). The results (the heat flux along the y axis) calculated from GiftBTE verified with analytical solutions are shown below.</p>
+<p><img alt="image4" src="_images/image4.png" /></p>
+</section>
+<section id="internal-heat-generation">
+<h2>5.3 Internal heat generation<a class="headerlink" href="#internal-heat-generation" title="Permalink to this heading"></a></h2>
+<p>The simulation domain for uniform internal heat generation in the entire Si thin film [3] with the length of L is shown below. Thermalizing boundary conditions with the same temperature T₂ are set at the left and right boundaries, while the top and bottom boundaries are set as specularly reflecting boundary conditions.</p>
+<p><img alt="image5" src="_images/image5.png" /></p>
+<p>The folder <strong>examples\heat-generation</strong> includes input files for three different Si thin film thicknesses (<strong>L=1e-5, 1e-6, 2e-7 m</strong>) with the same uniform internal heat generation. The results (the lattice temperature along the x axis) calculated from GiftBTE verified with numerical results from previous references [3] are shown below.</p>
+<p><img alt="image6" src="_images/image6.png" /></p>
+</section>
+<section id="thermal-transport-across-interfaces">
+<h2>5.4 Thermal transport across interfaces<a class="headerlink" href="#thermal-transport-across-interfaces" title="Permalink to this heading"></a></h2>
+<p>The simulation domain for thermal transport across Si-Ge interface [4] with the total length of L is shown below. Thermalizing boundary conditions with temperatures T₁ and T₂ are set at the left and right boundaries, respectively. The top and bottom boundaries are set as specularly reflecting boundary conditions. The left-side material is set as Ge, and the right-side material is set as Si.</p>
+<p><img alt="image7" src="_images/image7.png" /></p>
+<p>The folder <strong>examples\interface</strong> includes input files for three different total lengths of the Si-Ge interface  (<strong>L=20, 50, 220 nm</strong>). The results (the lattice temperature and interfical thermal conductance) calculated from GiftBTE verified with numerical results from previous references [4] are shown below.</p>
+<p><img alt="image8" src="_images/image8.png" /></p>
+</section>
+<section id="one-dimensional-transient-thermal-grating-ttg">
+<h2>5.5 One-dimensional transient thermal grating (TTG)<a class="headerlink" href="#one-dimensional-transient-thermal-grating-ttg" title="Permalink to this heading"></a></h2>
+<p>Transient heat conduction for one-dimensional transient thermal grating (TTG) problem [5] is shown below (Fig.(a)). A spatially sinusoidal temperature variation is set initially as given by the equation in Fig. (a). T₀ is the background temperature, A₀ is the amplitude of the temperature variation, and L is the grating period. ξ is defined as ξ = 2πKn, where Kn is the Knudsen number defined as Kn = vτ/L. As time progresses, the amplitude of the spatially sinusoidal temperature variation decreases. In our BTE computations, we study one period and set the left and right boundaries as periodic boundary conditions.</p>
+<p><img alt="image9" src="_images/image9.png" />
+The folder <strong>examples\TTG</strong> includes input files for seven different length periods  (<strong>ξ=0.001, 0.25, 0.5, 1, 2, 5, 100</strong>). These seven cases range from ballistic regime to diffusive regime. Fig.(b-d) show the amplitude of the temperature variation A/A₀ at different times calculated from GiftBTE, where t∗ represents the dimensionless time, defined as t/τ.</p>
+</section>
+<section id="thermal-conduction-in-nano-porous-media">
+<h2>5.6 Thermal conduction in nano-porous media<a class="headerlink" href="#thermal-conduction-in-nano-porous-media" title="Permalink to this heading"></a></h2>
+<p>The structure and computational domain of a sample of nanoporous media are depicted below (Fig. (a)), while the porosity of the material is determined to be 15.7%. A single period of the nano-porous media is extracted to facilitate computation, employing periodic boundary conditions on all outer boundaries. Additionally, a temperature difference of 1 K is imposed between the left and right boundaries, resulting in a temperature gradient along the x direction. The surface of the pore is treated as a diffuse boundary.</p>
+<p><img alt="image10" src="_images/image10.png" /></p>
+<p>The folder <strong>examples\nanoporous</strong> includes input files for porous media with three different pore sizes (<strong>50, 500, 5000nm</strong>). Fig.(b-c) show the temperature profiles and heat flux profiles (along the x direction) calculated from the GiftBTE. The calculated effective thermal conductivity values for different periods are also shown below.</p>
+<p><img alt="image11" src="_images/image11.png" /></p>
+</section>
+<section id="temperature-profiles-in-fin-field-effect-transistors">
+<h2>5.7 Temperature profiles in Fin field-effect transistors<a class="headerlink" href="#temperature-profiles-in-fin-field-effect-transistors" title="Permalink to this heading"></a></h2>
+<p>The structure and boundary conditions of a silicon FinFET are illustrated in Fig. (a), which are adapted from a previous study [6]. The thermalizing boundary, in contact with the metal electrode (source and drain) or away from the hot spot (substrate), is set at 300 K to simulate a room temperature environment. The diffusely reflecting boundary, in contact with the amorphous Si oxide, is set at the boundary in contact with the dielectric layer. The other boundaries are set as specularly reflecting boundaries to mimic the symmetric boundary between devices. The hot spot is set as a semi-ellipse.</p>
+<p><img alt="image12" src="_images/image12.png" /></p>
+<p>The folder <strong>examples\FinFET</strong> includes input files for silicon FinFET with three different Fin widths (<strong>1200, 120, 12nm</strong>). Fig.(d) show the temperature profiles in the FinFET calculated from the GiftBTE.</p>
+</section>
+<section id="simulations-of-time-domain-thermoreflectance-tdtr-experiment">
+<h2>5.8 Simulations of Time-domain thermoreflectance (TDTR) experiment<a class="headerlink" href="#simulations-of-time-domain-thermoreflectance-tdtr-experiment" title="Permalink to this heading"></a></h2>
+<p>The structure of the TDTR experiment is depicted in Fig. (a), where an ultra-fast modulated pulsed laser directly illuminates the semiconductor [7]. The computational domain and set of boundary conditions are illustrated in Fig. (b). Due to symmetry, we simulated a quarter of the entire system, as each side of the cube is 50 µm. The top boundary represents the surface of the semiconductor and is set as a diffusely reflecting boundary. The two inner boundaries are set as specularly reflecting boundaries to capture the system’s symmetry. The remaining three boundaries are set at 300 K to simulate a room temperature environment. As shown in Fig. (c), the pump beam pulses repeat at a frequency of frep and are modulated into a sinusoidal shape with a frequency of fmod, which induces heat source in the semiconductor.</p>
+<p><img alt="image13" src="_images/image13.png" /></p>
+<p>The folder <strong>examples\TDTR</strong> includes input files for simulating TDTR experiments with frep=80MHz, fmod=10MHz and a pump beam radius w₀=3.8μm. Fig.(d) show the GiftBTE calculated average temperature within the pump beam at the surface of the semiconductor at different times.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="running.html" class="btn btn-neutral float-left" title="4. Running GiftBTE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tutorial.html" class="btn btn-neutral float-right" title="6. Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Hua Bao&#39;s group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

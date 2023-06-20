@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6. Tutorial &mdash; GiftBTE v1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Frequently Asked Questions (FAQ)" href="faq.html" />
+    <link rel="prev" title="5. Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GiftBTE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running.html">4. Running GiftBTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#case-1-temperature-profiles-in-fin-field-effect-transistors">6.1 CASE 1: Temperature profiles in Fin field-effect transistors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-control-file">Create a CONTROL file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-geometry-file">Create a GEOMETRY file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-finfet-bound-1w4-mptxt-file-in-comsol">Create FinFet_bound_1w4.mptxt file in COMSOL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-inputbc-finfet-dat-file">Create inputbc_FinFET.dat file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-phonon-file">Create a PHONON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#tau300k-pure-dat-created-by-alamode-tutorial-7-phonon-lifetime">tau300K_pure.dat (created by ALAMODE Tutorial 7 phonon Lifetime)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#case-2-thermal-conduction-in-nano-porous-media">6.2 CASE 2: Thermal conduction in nano-porous media</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Create a CONTROL file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Create a GEOMETRY file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#create-gms2685-msh-file-in-gmsh">Create gms2685.msh file in Gmsh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-inputbc-2d-porous-dat-file">Create inputbc_2D_porous.dat file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Create a PHONON file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">8. Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiftBTE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">6. Tutorial</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tutorial.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorial">
+<h1>6. Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this heading"></a></h1>
+<section id="case-1-temperature-profiles-in-fin-field-effect-transistors">
+<h2>6.1 CASE 1: Temperature profiles in Fin field-effect transistors<a class="headerlink" href="#case-1-temperature-profiles-in-fin-field-effect-transistors" title="Permalink to this heading"></a></h2>
+<p>Here is an example of predicting temperature rise of FinFET using mesh files generated from COMSOL software and phonon properties calculated from ALAMODE package. The files are listed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>input
+├── CONTROL
+├── GEOMETRY 
+├── PHONON
+├── FinFet_bound_1w4.mptxt
+├── inputbc_Finfet.dat
+├── heatfile.xt
+├── materials
+  ├── Si
+          ├── tau300K_pure.dat
+</pre></div>
+</div>
+<section id="create-a-control-file">
+<h3>Create a CONTROL file<a class="headerlink" href="#create-a-control-file" title="Permalink to this heading"></a></h3>
+<p>The CONTROL file of this example is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Order</span><span class="p">:</span> <span class="o">//</span><span class="mi">1</span><span class="p">:</span><span class="n">first</span> <span class="n">order</span><span class="p">;</span> <span class="mi">2</span><span class="p">:</span><span class="n">second</span> <span class="n">order</span><span class="p">;</span> <span class="mi">2</span><span class="n">limit</span><span class="p">:</span> <span class="n">limited</span> <span class="n">second</span> <span class="n">order</span>
+<span class="mi">2</span> 
+<span class="n">IterativeScheme</span><span class="p">:</span> <span class="o">//</span> <span class="n">Synthetic</span> <span class="ow">or</span> <span class="n">Sequential</span>
+<span class="n">Synthetic</span>
+<span class="n">MatrixSolver</span><span class="p">:</span> <span class="o">//</span> <span class="n">LU</span> <span class="ow">or</span> <span class="n">BICGSTAB</span>
+<span class="n">LU</span>
+<span class="n">ResidualTemp</span><span class="p">:</span>
+<span class="mf">1e-5</span>
+<span class="n">ResidualFlux</span><span class="p">:</span>
+<span class="mf">1e-2</span>
+</pre></div>
+</div>
+<p>This CONTROL file tells the GiftBTE to adopt 2nd order spatial discretization and synthetic iterative scheme. The MatrixSolver is LU factorization. The convergence criteria for temperature and heat flux are also specified.</p>
+</section>
+<section id="create-a-geometry-file">
+<h3>Create a GEOMETRY file<a class="headerlink" href="#create-a-geometry-file" title="Permalink to this heading"></a></h3>
+<p>The GEOMETRY file of this example is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GeometryDimension：//1 or 2 or 3
+3
+ScaleX:
+1e-9
+ScaleY:
+1e-9
+ScaleZ:
+1e-9
+BCFile:
+input/inputbc_Finfet.dat
+MeshfileType: // COMSOL or MSH
+COMSOL
+MeshFile=
+input/FinFet_bound_1w4.mptxt
+HeatfileType: //COORDINATE or REGION
+REGION
+HeatFile=
+input/heatfile.xt
+</pre></div>
+</div>
+<p><strong>Attention</strong>: <strong>MeshType</strong>=”COMSOL” represents that the mesh file is generated from COMSOL software.</p>
+<p><strong>HeatType</strong>= “REGION” represents that uniform heat source needs to be added in each geometry region.</p>
+<section id="create-finfet-bound-1w4-mptxt-file-in-comsol">
+<h4>Create FinFet_bound_1w4.mptxt file in COMSOL<a class="headerlink" href="#create-finfet-bound-1w4-mptxt-file-in-comsol" title="Permalink to this heading"></a></h4>
+<p>Build geometry in COMSOL</p>
+<p><img alt="image14" src="_images/image14.png" /></p>
+<p>Generate mesh</p>
+<p><img alt="image15" src="_images/image15.png" /></p>
+<p>Export the mesh file (.mphtxt):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Created</span> <span class="n">by</span> <span class="n">COMSOL</span> <span class="n">Multiphysics</span><span class="o">.</span>
+  
+<span class="n">Major</span> <span class="o">&amp;</span> <span class="n">minor</span> <span class="n">version</span>
+<span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="c1"># number of tags</span>
+<span class="n">Tags</span>
+<span class="mi">5</span> <span class="n">mesh1</span>
+<span class="mi">1</span> <span class="c1"># number of types</span>
+<span class="n">Types</span>
+<span class="mi">3</span> <span class="n">obj</span>
+
+<span class="o">---------</span> <span class="n">Object</span> <span class="mi">0</span> <span class="o">----------</span>
+
+<span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span>
+<span class="mi">4</span> <span class="n">Mesh</span> <span class="c1"># class</span>
+<span class="mi">4</span> <span class="c1"># version</span>
+<span class="mi">3</span> <span class="c1"># sdim</span>
+<span class="mi">16930</span> <span class="c1"># number of mesh vertices</span>
+<span class="mi">0</span> <span class="c1"># lowest mesh vertex index</span>
+
+<span class="n">Mesh</span> <span class="n">vertex</span> <span class="n">coordinates</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mi">25</span> <span class="o">-</span><span class="mi">20</span>
+<span class="o">-</span><span class="mf">3.0000000000000004</span> <span class="o">-</span><span class="mf">25.000000000000007</span> <span class="o">-</span><span class="mf">20.000000000000007</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mf">23.099999999999994</span> <span class="o">-</span><span class="mi">20</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mf">25.000000000000004</span> <span class="o">-</span><span class="mi">18</span>
+<span class="o">-</span><span class="mi">1</span> <span class="o">-</span><span class="mf">25.000000000000007</span> <span class="o">-</span><span class="mf">20.000000000000004</span>
+<span class="o">-</span><span class="mf">2.9999999999999964</span> <span class="o">-</span><span class="mf">23.100000000000005</span> <span class="o">-</span><span class="mi">20</span>
+<span class="o">-</span><span class="mf">3.0000000000000004</span> <span class="o">-</span><span class="mi">25</span> <span class="o">-</span><span class="mi">18</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mf">21.199999999999996</span> <span class="o">-</span><span class="mi">20</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mf">23.099999999999994</span> <span class="o">-</span><span class="mi">18</span>
+<span class="o">-</span><span class="mi">5</span> <span class="o">-</span><span class="mf">25.000000000000004</span> <span class="o">-</span><span class="mf">15.999999999999998</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="create-inputbc-finfet-dat-file">
+<h4>Create inputbc_FinFET.dat file<a class="headerlink" href="#create-inputbc-finfet-dat-file" title="Permalink to this heading"></a></h4>
+<p>The inputbc_FinFET.dat is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">18</span> <span class="c1">#Number of boundaries</span>
+  
+<span class="n">BoundaryIndex</span> <span class="n">BoundaryType</span> <span class="n">BoundaryValue</span> <span class="o">//</span><span class="n">BoundaryIndex</span> <span class="n">starts</span> <span class="kn">from</span> <span class="mi">1</span> <span class="o">//</span><span class="n">BoundaryType</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">thermalizing</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">diffusely</span> <span class="n">reflecting</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">3</span><span class="p">:</span><span class="n">specularly</span> <span class="n">reflecting</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">5</span><span class="p">:</span><span class="n">interficial</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span><span class="n">periodic</span>
+<span class="mi">1</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">2</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">4</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">5</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">6</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">8</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">10</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">11</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">12</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">14</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">15</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">16</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">18</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">19</span> <span class="mi">1</span> <span class="mi">300</span>
+<span class="mi">20</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">21</span> <span class="mi">2</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>How to know the index of each boundary, see COMSOL</p>
+<p><img alt="image16" src="_images/image16.png" /></p>
+<p><strong>Attention</strong>: the boundary index of each boundary in the inputbc_FinFET.dat file is equal to the index in COMSOL software. Meanwhile, boundaries that do not need to be specified, such as some internal boundaries, should not be typed in the inputbc_FinFET.dat.</p>
+<p><strong>Create heatsource.txt file</strong></p>
+<p>Set heat source in COMSOL. As shown below, the highlighted semi-cylinder region (i.e., the 3rd region) is where the heat source needs to be added.</p>
+<p><img alt="image17" src="_images/image17.png" /></p>
+<p>The heatfile.txt is typed as the following (HeatType = “REGION”):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">3</span> <span class="c1"># geometry: #geo index - heat index start from 0</span>
+<span class="mi">1</span> <span class="mi">0</span>
+<span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="mf">1e19</span>
+</pre></div>
+</div>
+<p><strong>Attention</strong>: the geometry index of each geometry/region in the heatfile.txt file starts from “1”</p>
+</section>
+</section>
+<section id="create-a-phonon-file">
+<h3>Create a PHONON file<a class="headerlink" href="#create-a-phonon-file" title="Permalink to this heading"></a></h3>
+<p>The PHONON file is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MaterialNumber</span><span class="o">=</span>
+<span class="mi">1</span>
+<span class="n">BandNumber</span><span class="o">=</span>
+<span class="mi">15</span>
+
+<span class="n">MaterialFile</span> <span class="mi">1</span><span class="p">:</span> <span class="n">ALAMODE</span>
+<span class="nb">input</span><span class="o">/</span><span class="n">materials</span><span class="o">/</span><span class="n">Si</span><span class="o">/</span><span class="n">tau300K_pure</span><span class="o">.</span><span class="n">dat</span>
+
+<span class="n">GeometryMaterialType</span><span class="p">:</span> <span class="c1">#geometryindex and matterindex both start from 1</span>
+<span class="mi">1</span> <span class="mi">1</span>
+<span class="mi">2</span> <span class="mi">1</span>
+<span class="mi">3</span> <span class="mi">1</span>
+
+<span class="n">MaterialDimension</span><span class="p">:</span>
+<span class="mi">3</span>
+<span class="n">Ntheta</span><span class="p">:</span>
+<span class="mi">2</span>
+<span class="n">Nphi</span><span class="p">:</span>
+<span class="mi">4</span>
+</pre></div>
+</div>
+<p>Attention: the geometry index of each geometry/region in the PHONON file starts from “1”. “ALAMODE” represents using phonon properties calculated from the ALAMODE package as the input</p>
+<section id="tau300k-pure-dat-created-by-alamode-tutorial-7-phonon-lifetime">
+<h4>tau300K_pure.dat (created by ALAMODE Tutorial 7 phonon Lifetime)<a class="headerlink" href="#tau300k-pure-dat-created-by-alamode-tutorial-7-phonon-lifetime" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Result analyzer ver. 1.0.5</span>
+<span class="c1">#Input file : si222_50_01.result</span>
+<span class="c1">#Phonon lifetime at temperature 300 K.</span>
+<span class="c1">#kpoint range 1 3107</span>
+<span class="c1">#mode   range 1 6</span>
+<span class="c1">#  ik,  is, Frequency [cm^{-1}], Lifetime [ps], |Velocity| [m/s], MFP [nm], Multiplicity, Thermal conductivity par mode (xx, xy, ...) [W/mK]</span>
+    <span class="mi">1</span>    <span class="mi">1</span>    <span class="mf">1.09737e-10</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">1</span>    <span class="mi">2</span>    <span class="mf">1.09737e-10</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">1</span>    <span class="mi">3</span>    <span class="mf">1.09737e-10</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">1</span>    <span class="mi">4</span>        <span class="mf">509.651</span>         <span class="mf">1.6395</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">1</span>    <span class="mi">5</span>        <span class="mf">509.651</span>         <span class="mf">1.6395</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">1</span>    <span class="mi">6</span>        <span class="mf">509.651</span>         <span class="mf">1.6395</span>              <span class="mi">0</span>              <span class="mi">0</span>    <span class="mi">1</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>              <span class="mi">0</span>
+    <span class="mi">2</span>    <span class="mi">1</span>        <span class="mf">9.27625</span>        <span class="mf">5695.14</span>        <span class="mf">4347.12</span>        <span class="mf">24757.5</span>    <span class="mi">8</span>      <span class="mf">0.0988522</span>    <span class="mf">2.52613e-07</span>    <span class="mf">2.52613e-07</span>    <span class="mf">2.52613e-07</span>      <span class="mf">0.0988522</span>    <span class="mf">2.52613e-07</span>    <span class="mf">2.52613e-07</span>    <span class="mf">2.52613e-07</span>      <span class="mf">0.0988522</span>
+    <span class="mi">2</span>    <span class="mi">2</span>        <span class="mf">9.27625</span>        <span class="mf">5695.14</span>        <span class="mf">4347.12</span>        <span class="mf">24757.5</span>    <span class="mi">8</span>      <span class="mf">0.0990608</span>    <span class="mf">2.40786e-07</span>    <span class="mf">2.40786e-07</span>    <span class="mf">2.40786e-07</span>      <span class="mf">0.0990608</span>    <span class="mf">2.40786e-07</span>    <span class="mf">2.40786e-07</span>    <span class="mf">2.40786e-07</span>      <span class="mf">0.0990608</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="case-2-thermal-conduction-in-nano-porous-media">
+<h2>6.2 CASE 2: Thermal conduction in nano-porous media<a class="headerlink" href="#case-2-thermal-conduction-in-nano-porous-media" title="Permalink to this heading"></a></h2>
+<iframe height=500 width=700 src="../media/toturial_Gift-BTE2_small.mp4"><p>Here is an example of predicting thermal conduction in nano-porous media using mesh files generated from GMSH software and phonon properties calculated from ShengBTE. The files are listed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>input
+├── CONTROL
+├── GEOMETRY 
+├── PHONON
+├── gms2685.msh
+├── inputbc_2D_porous.dat
+├── materials
+  ├── Ge
+               ├── ShengBTEFile 
+                  ├── BTE.omega
+                        ├── BTE.qpoints_full
+                        ├── BTE.v
+                        ├── BTE.w_final
+                        ├── CONTROL
+</pre></div>
+</div>
+<section id="id1">
+<h3>Create a CONTROL file<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<p>The CONTROL file of this example is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MatrixSolver</span><span class="p">:</span> <span class="o">//</span> <span class="n">LU</span> <span class="ow">or</span> <span class="n">BICGSTAB</span>
+<span class="n">BICGSTAB</span>
+</pre></div>
+</div>
+<p>This CONTROL file tells the GiftBTE to adopt the BICGSTAB solver. Other commands retain the default settings.</p>
+</section>
+<section id="id2">
+<h3>Create a GEOMETRY file<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>The GEOMETRY file of this example is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GeometryDimension</span><span class="p">:</span> <span class="o">//</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">2</span> <span class="ow">or</span> <span class="mi">3</span>
+<span class="mi">2</span>
+<span class="n">ScaleX</span><span class="p">:</span>
+<span class="mf">5e-7</span>
+<span class="n">ScaleY</span><span class="p">:</span>
+<span class="mf">5e-7</span>
+<span class="n">ScaleZ</span><span class="p">:</span>
+<span class="mf">5e-7</span>
+<span class="n">BCFile</span><span class="p">:</span>
+<span class="nb">input</span><span class="o">/</span><span class="n">inputbc_2D_porous</span><span class="o">.</span><span class="n">dat</span>
+<span class="n">MeshfileType</span><span class="p">:</span> <span class="o">//</span> <span class="n">COMSOL</span> <span class="ow">or</span> <span class="n">MSH</span>
+<span class="n">MSH</span>
+<span class="n">MeshFile</span><span class="p">:</span>
+<span class="nb">input</span><span class="o">/</span><span class="n">gms2685</span><span class="o">.</span><span class="n">msh</span>
+</pre></div>
+</div>
+<p><strong>Attention</strong>: <strong>MeshType</strong>=”MSH” represents that the mesh file is generated from GMESH software.</p>
+<section id="create-gms2685-msh-file-in-gmsh">
+<h4>Create gms2685.msh file in Gmsh<a class="headerlink" href="#create-gms2685-msh-file-in-gmsh" title="Permalink to this heading"></a></h4>
+<p>Built geometry and mesh in GMESH</p>
+<p><img alt="image18" src="_images/image18.png" /></p>
+<p>Export the mesh file (.msh):</p>
+<p><img alt="image19" src="_images/image19.png" /></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$MeshFormat
+4.1 0 8
+$EndMeshFormat
+$Entities
+11 11 1 0
+1 1 0 0 0 
+2 1 1 0 0 
+3 0.85 0 0 0 
+4 0.65 4.491424253481369e-15 0 0 
+5 0 0 0 0 
+6 0 1 0 0 
+7 0.65 1.000000000000004 0 0 
+8 0.85 1 0 0 
+9 0.35 0.25 0 0 
+10 0.35 0.75 0 0 
+11 0.85 0.5 0 0 
+1 0.9999999000000001 -9.999999994736442e-08 -1e-07 1.0000001 1.0000001 1e-07 0 2 1 -2 
+2 0.8499999 -1e-07 -1e-07 1.0000001 1e-07 1e-07 0 2 3 -1 
+3 0.6499999000000001 -1.000000000028756e-07 -1e-07 0.8500000999999999 0.1000001 1e-07 0 2 3 -4 
+4 -1.000000000028756e-07 -1e-07 -1e-07 0.6500001 1e-07 1e-07 0 2 5 -4 
+...
+</pre></div>
+</div>
+</section>
+<section id="create-inputbc-2d-porous-dat-file">
+<h4>Create inputbc_2D_porous.dat file<a class="headerlink" href="#create-inputbc-2d-porous-dat-file" title="Permalink to this heading"></a></h4>
+<p>The inputbc_2D_porous.dat is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">11</span> <span class="c1">#number of boundaries</span>
+
+<span class="n">BoundaryIndex</span> <span class="n">BoundaryType</span> <span class="n">BoundaryValue</span> <span class="o">//</span><span class="n">BoundaryIndex</span> <span class="n">starts</span> <span class="kn">from</span> <span class="mi">1</span> <span class="o">//</span><span class="n">BoundaryType</span><span class="o">=</span><span class="mi">1</span><span class="p">:</span><span class="n">thermalizing</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">2</span><span class="p">:</span><span class="n">diffusely</span> <span class="n">reflecting</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">3</span><span class="p">:</span><span class="n">specularly</span> <span class="n">reflecting</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">=</span><span class="mi">5</span><span class="p">:</span><span class="n">interficial</span><span class="p">;</span> <span class="n">BoundaryType</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span><span class="n">periodic</span>
+<span class="mi">1</span> <span class="o">-</span><span class="mi">5</span> <span class="mi">0</span>
+<span class="mi">2</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">3</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">4</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">5</span> <span class="o">-</span><span class="mi">1</span> <span class="mi">1</span>
+<span class="mi">6</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">7</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">8</span> <span class="mi">3</span> <span class="mi">0</span>
+<span class="mi">9</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">10</span> <span class="mi">2</span> <span class="mi">0</span>
+<span class="mi">11</span> <span class="mi">2</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p><strong>Attention</strong>: boundary 1 and boundary 5 are a pair of periodic boundaries where a temperature difference of 1K is applied.</p>
+<p>How to know the index of each boundary, see GMESH</p>
+<p><img alt="image20" src="_images/image20.png" /></p>
+<p>Attention: the boundary index of each boundary in the inputbc_2D_porous.dat file is equal to the index in GMESH software.</p>
+</section>
+</section>
+<section id="id3">
+<h3>Create a PHONON file<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>The PHONON file is typed as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MaterialNumber</span><span class="o">=</span>
+<span class="mi">1</span>
+<span class="n">BandNumber</span><span class="o">=</span>
+<span class="mi">12</span>
+
+<span class="n">MaterialFile</span> <span class="mi">1</span><span class="p">:</span> <span class="n">ShengBTE</span>
+<span class="nb">input</span><span class="o">/</span><span class="n">materials</span><span class="o">/</span><span class="n">Ge</span><span class="o">/</span><span class="n">ShengBTEFile</span>
+
+<span class="n">GeometryMaterialType</span><span class="p">:</span> <span class="o">//</span><span class="n">geometryindex</span> <span class="ow">and</span> <span class="n">matterindex</span> <span class="n">both</span> <span class="n">start</span> <span class="kn">from</span> <span class="mi">1</span>
+<span class="mi">1</span> <span class="mi">1</span>
+
+<span class="n">MaterialDimension</span><span class="p">:</span>
+<span class="mi">3</span>
+<span class="n">Ntheta</span><span class="p">:</span>
+<span class="mi">8</span>
+<span class="n">Nphi</span><span class="p">:</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+<p><strong>Attention</strong>: the geometry index of each geometry/region in the PHONON file starts from “1”. “ShengBTE” represents using phonon properties calculated from the ShengBTE (version &gt;= 1.1.1) as the input. Five files from the ShengBTE are needed, i.e., <strong>BTE.omega</strong>, <strong>BTE.qpoints_full</strong>, <strong>BTE.v</strong>, <strong>BTE.w_final</strong>, <strong>CONTROL</strong> (CONTROL file in ShengBTE).</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="5. Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="faq.html" class="btn btn-neutral float-right" title="7. Frequently Asked Questions (FAQ)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Hua Bao&#39;s group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

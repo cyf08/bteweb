@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4. Running GiftBTE &mdash; GiftBTE v1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Examples" href="examples.html" />
+    <link rel="prev" title="3. Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            GiftBTE
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">1. About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="download.html">2. Download</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">3. Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Running GiftBTE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-run">4.1 How to run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#input-folder">4.2 input Folder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#control">CONTROL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geometry">GEOMETRY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#phonon">PHONON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#other-files">Other files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#meshfile">1. MeshFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bcfile">2. BCFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interficialfile-not-mandatory">3. InterficialFile  (not mandatory)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#heatfile-not-mandatory">4. HeatFile (not mandatory)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initialtemperature-not-mandatory">5. InitialTemperature  (not mandatory)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#output">4.3 Output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">5. Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">6. Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">7. Frequently Asked Questions (FAQ)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">8. Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GiftBTE</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">4. Running GiftBTE</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/running.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="running-giftbte">
+<h1>4. Running GiftBTE<a class="headerlink" href="#running-giftbte" title="Permalink to this heading"></a></h1>
+<section id="how-to-run">
+<h2>4.1 How to run<a class="headerlink" href="#how-to-run" title="Permalink to this heading"></a></h2>
+<p>After the compiling, there is an executable file <strong>BTE_CPU</strong> under the <strong>bin</strong> folder. Run <strong>BTE_CPU</strong> in the same folder as the <strong>input</strong> folder by
+<strong>path of BTE_CPU</strong> (serial) or <strong>mpirun -np</strong> n <strong>path of BTE_CPU</strong> (parallel)</p>
+<p>For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls
+input
+$ mpirun -np 4 ../../BTE_CPU
+the process0 of 4
+the process1 of 4
+the process3 of 4
+the process2 of 4
+</pre></div>
+</div>
+</section>
+<section id="input-folder">
+<h2>4.2 input Folder<a class="headerlink" href="#input-folder" title="Permalink to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>input
+├── CONTROL
+├── GEOMETRY 
+├── PHONON
+├── Other files
+</pre></div>
+</div>
+<p>There are three mandatory files in the <strong>input folder</strong>: CONTROL, PHONON and GEOMETRY</p>
+<section id="control">
+<h3>CONTROL<a class="headerlink" href="#control" title="Permalink to this heading"></a></h3>
+<p>The <strong>CONTROL</strong> file determines the BTE solver to be used.</p>
+<p>The format in the CONTROL file is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>State (not mandatory)</strong>:</p>
+<p>This command determines whether the problem is steady-state or transient-state.</p>
+<p>Value: “Transient” represents the transient, while “Steady” represents the steady state.</p>
+<p>If it is not set, the default value is “Steady”, which means the steady-state solver is employed.</p>
+<p><strong>Order (not mandatory)</strong>:</p>
+<p>This command defines the spatial accuracy order.</p>
+<p>Value: “1” represents the first order, while “2” corresponds to the second order.</p>
+<p>If it is not set, the default value is “2”, which means the second order accuracy is employed.</p>
+<p>The value “1” is only recommended when the solution is unstable (may happen for meshes with bad quantity).</p>
+<p><strong>Tref (not mandatory)</strong></p>
+<p>This command defines the reference temperature. The unit is “K”.</p>
+<p>Value:  number</p>
+<p>If it is not set, the default value is “300”, which means that the reference temperature is 300 K.</p>
+<p><strong>IterativeScheme (only for steady-state, not mandatory)</strong>:</p>
+<p>This command specifies which iterative scheme for steady-state is employed.</p>
+<p>Value: “Sequential” refers to the sequential iterative scheme (commonly adopted in discrete ordinates method), and “Synthetic” indicates the synthetic iterative scheme.</p>
+<p>If it is not set, the default value is “Sequential”, which means the sequential iterative scheme is employed.</p>
+<p>The value “Sequential” is suggested. The value “Synthetic” can be used when the convergence rate of iterations is too slow (near-diffusive regime).</p>
+<p><strong>MatrixSolver (only for steady-state, not mandatory)</strong>:</p>
+<p>This command determines the matrix solver to be utilized.</p>
+<p>Value: “LU” denotes LU factorization and solver. “BICGSTAB” denotes Iterative method (BICGSTAB with ILU preconditioner)</p>
+<p>If it is not set, the default value is “LU”</p>
+<p>The value “BICGSTAB” is recommended when the memory is not enough. However, the time consumption of  BICGSTAB is much larger.</p>
+<p><strong>MaxNumIter (only for steady-state, not mandatory)</strong>:</p>
+<p>This command sets the maximum number of iterations.</p>
+<p>Value: Number</p>
+<p>If it is not set, the default value is “10000”.</p>
+<p><strong>ResidualTemp (not mandatory)</strong>:</p>
+<p>This command establishes the convergence criterion for temperature.</p>
+<p>Value: Number</p>
+<p>If it is not set, the default value is “1e-5”.</p>
+<p><strong>ResidualFlux (not mandatory)</strong>:</p>
+<p>This command sets the convergence criterion for heat flux.</p>
+<p>Value: Number</p>
+<p>If it is not set, the default value is “1e-3”.</p>
+<p><strong>TimeStep (mandatory for transient)</strong>:</p>
+<p>This command sets the time step for transient problem.</p>
+<p>Value: Number (should satisfy the CFL condition)</p>
+<p><strong>TotalTime (mandatory for transient)</strong>:</p>
+<p>This command sets the duration that needs to be computed starting from the initial state of transient problem.</p>
+<p>Value: Number</p>
+<p><strong>IsTDTR (not mandatory)</strong>:</p>
+<p>This command determines whether the problem is Time-domain thermoreflectance experiment（TDTR) in transient-state or not.</p>
+<p>Value: “1” represents TDTR while “0” represents no TDTR.</p>
+<p>If it is not set, the default value is “0”, which means not consider TDTR.</p>
+<p><strong>PulseTime (mandatory if IsTDTR is “1”)</strong>:</p>
+<p>This command sets the single heating time for TDTR problem.</p>
+<p>Value: Number  (should be a multiple of DeltaTime ).The unit is s.</p>
+<p><strong>RepetitionFrequency (mandatory for TDTR)</strong>:</p>
+<p>This command sets the repetition frequency for TDTR problem.</p>
+<p>Value: Number. The unit is MHz.</p>
+<p><strong>ModulationFrequency (mandatory for TDTR)</strong>:</p>
+<p>This command sets the modulation frequency for TDTR problem.</p>
+<p>Value: Number. The unit is MHz.</p>
+<p><strong>RadiusProbe (mandatory for TDTR)</strong>:</p>
+<p>This command sets the radius in the X-Y plane for TDTR problem, which is used to calculate average temperature at the top face.</p>
+<p>Value: Number. The unit is m.</p>
+<p><strong>InitialTemperatureFile (not mandatory)</strong>:</p>
+<p>This command specifies the path of the initial temperature file.</p>
+<p>Value: the path of the initial temperature file.</p>
+<p>If it is not set, the default initial temperature of all cells is the same as the reference temperature.</p>
+</section>
+<section id="geometry">
+<h3>GEOMETRY<a class="headerlink" href="#geometry" title="Permalink to this heading"></a></h3>
+<p>The GEOMETRY file provides the phonon properties</p>
+<p>The format in the GEOMETRY file is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>GeometryDimension (mandatory)</strong>:</p>
+<p>This command defines the dimensions of the computation domain.</p>
+<p>Value: “1” denotes one dimension. “2” denotes two dimension. “3” denotes three dimension.</p>
+<p><strong>ScaleX (mandatory)</strong>:</p>
+<p>This command defines the scale in the x direction. The unit is “m”.</p>
+<p>Value: Number.</p>
+<p><strong>ScaleY (mandatory)</strong>:</p>
+<p>This command defines the scale in the y direction. The unit is “m”.</p>
+<p>Value: Number.</p>
+<p><strong>ScaleZ (mandatory)</strong>:</p>
+<p>This command defines the scale in the z direction. The unit is “m”.</p>
+<p>Value: Number.</p>
+<p><strong>BCFile (mandatory)</strong>:</p>
+<p>This command specifies the path of the boundary condition file.</p>
+<p>Value: the path of the boundary condition file.</p>
+<p><strong>MeshType (mandatory)</strong>:
+This command defines the type of files.</p>
+<p>Value: “MSH” refers to the .msh mesh file from GMSH. “COMSOL” refers to the .mphtxt file from COMSOL.</p>
+<p><strong>MeshFile (mandatory)</strong>:</p>
+<p>This command specifies the path of the mesh file.</p>
+<p>Value: the path of the mesh file.</p>
+<p><strong>HeatType (not mandatory)</strong>:</p>
+<p>This command specifies the type of heat generation file.</p>
+<p>Value: “REGION” provides a uniform heat source in each geometry region. The format is “index of geometry \ heat source value”. “COORDINATE” provides the heat source value at each spatial point. The format is “X Y Z \ heat source value”.</p>
+<p><strong>HeatFile (not mandatory)</strong>:</p>
+<p>This command specifies the path of the heat source file.</p>
+<p>Value: the path of the heat generation file.</p>
+</section>
+<section id="phonon">
+<h3>PHONON<a class="headerlink" href="#phonon" title="Permalink to this heading"></a></h3>
+<p>The PHONON file provides the phonon properties</p>
+<p>The format in the PHONON file is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="n">Command</span><span class="p">:</span>
+<span class="n">Value</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>MaterialNumber (mandatory)</strong>:</p>
+<p>This command defines how many kinds of materials are involved in this computation.</p>
+<p>Value: number &gt;=1.</p>
+<p><strong>BandNumber (mandatory)</strong>:</p>
+<p>This command defines how many mean free path bins are discretized in this computation.</p>
+<p>Value: number &gt;=1 (Suggested value: 12-15).</p>
+<p><strong>MaterialFile (mandatory)</strong>:</p>
+<p>This command defines the file path of the phonon properties. “<strong>ALAMODE</strong>” is used to adopt the interface with <strong>ALAMODE</strong>, which reads the phonon lifetime files from <strong>ALAMODE</strong>. “<strong>ShengBTE</strong>” is used to adopt the interface with <strong>ShengBTE</strong>, which reads <strong>BTE.omega</strong>, <strong>BTE.qpoints_ful</strong>, <strong>BTE.v</strong>, <strong>BTE.w_final</strong>, and <strong>CONTROL</strong> files from <strong>ShengBTE</strong>. “<strong>DATABASE</strong>” is used to directly read the phonon properties from the <strong>GiftBTE</strong> database.
+Value: the path of the phonon properties files.
+(Multiple material types can be specified for different geometries).</p>
+<p><strong>GeometryMaterialType (mandatory)</strong>:</p>
+<p>This command defines the corresponding material for each geometry region in the mesh file (GEOMETRY).</p>
+<p>Value:  index of geometry    index of material.</p>
+<p>Note: the index of geometry is its index shown in COMSOL/GMESH GUI; both the index of geometry and the index of material start from “1”.</p>
+<p><strong>MaterialDimension (mandatory)</strong>:</p>
+<p>This command defines the material dimension.</p>
+<p>Value: “2” is used for two-dimensional materials such as graphene. “3” is used for three-dimensional materials.</p>
+<p>Note: the material dimension does not necessarily correlate with the geometry dimension. There is also one-dimensional geometry for three-dimensional materials (silicon thin film).</p>
+<p><strong>Ntheta (not mandatory)</strong>:</p>
+<p>This command defines the number of polar angles in directional discretization.
+Value: number&gt;=1.</p>
+<p>If it is not set, the default value is “4”.</p>
+<p><strong>Nphi (not mandatory)</strong>:</p>
+<p>This command defines the number of azimuth angles in directional discretization.
+Value: number&gt;=1.</p>
+<p>If it is not set, the default value is “4”.</p>
+<p>Note: the commands that are not mandatory, can be deleted or commented out using an exclamation point “!”.</p>
+</section>
+<section id="other-files">
+<h3>Other files<a class="headerlink" href="#other-files" title="Permalink to this heading"></a></h3>
+<section id="meshfile">
+<h4>1. MeshFile<a class="headerlink" href="#meshfile" title="Permalink to this heading"></a></h4>
+<p>The <strong>MeshFile</strong> file provides the mesh used for computation.</p>
+<p>The <strong>MeshType</strong> in <strong>GEOMETRY</strong> should be “COMSOL” when the mesh file is built by COMSOL software (.mphtxt file) or “MSH” when the mesh file is built by GMESH (.msh file). The mesh file can be directly exported by COMSOL software (version &gt;= 5.5) or GMESH (version &gt;= 4.10).</p>
+</section>
+<section id="bcfile">
+<h4>2. BCFile<a class="headerlink" href="#bcfile" title="Permalink to this heading"></a></h4>
+<p>The <strong>BCFile</strong> file provides the condition of each boundary. The format in the <strong>BCFile</strong> file should be set in the form of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Number</span>  <span class="c1">#Number of boundaries</span>
+
+<span class="c1">#BoundaryIndex BoundaryType BoundaryValue</span>
+<span class="n">BoundaryIndex</span>   <span class="n">BoundaryType</span>   <span class="n">BoundaryValue</span>   <span class="n">InterficialFile</span>
+<span class="n">BoundaryIndex</span>   <span class="n">BoundaryType</span>   <span class="n">BoundaryValue</span>   <span class="n">InterficialFile</span>
+<span class="o">......</span>
+</pre></div>
+</div>
+<p><strong>Number (mandatory)</strong>:</p>
+<p>This command gives the total number of boundaries that need to be specified. Please skip the boundaries that do not need to be specified, such as internal boundaries.</p>
+<p><strong>BoundaryIndex (mandatory)</strong>:</p>
+<p>This command gives the index of each boundary (starts from “1”), which is its index in the COMSOL/GMESH GUI.</p>
+<p><strong>BoundaryType (mandatory)</strong>:</p>
+<p>This command specifies the types of boundary conditions.</p>
+<p>Value: “1” represents the thermalizing boundary condition, with its value being the temperature. “2” represents the diffuse boundary condition, which does not have a value. “3” represents the specular boundary condition, which also does not have a value. “5” represents the interfacial boundary condition, and <strong>InterficialFile</strong> is the path of the file that specifies the transmittance coefficient of each phonon band. “&lt;0”: periodic boundary condition. The BoundaryType should be “- the index of the connected boundary”. For example, if the boundary “1” and boundary “3” are a pair of periodic boundaries. The type of the “1” boundary should be “-3”, and the type of the “3” boundary should be “-1”.</p>
+<p><strong>BoundaryValue (mandatory)</strong>:</p>
+<p>This command sets the temperature value when BoundaryType=1 or temperature difference between two periodic boundary conditions (BoundaryType&lt;0). Please set this command as “0” for other types of boundary conditions.</p>
+<p><strong>InterficialFile (not mandatory)</strong>:</p>
+<p>This command sets the path of the file that specifies the transmittance coefficient of each phonon band when BoundaryType=5. This command is useless for other types of boundary conditions.</p>
+</section>
+<section id="interficialfile-not-mandatory">
+<h4>3. InterficialFile  (not mandatory)<a class="headerlink" href="#interficialfile-not-mandatory" title="Permalink to this heading"></a></h4>
+<p>The <strong>InterficialFile</strong> file provides transmittance coefficient of each phonon band. The format in the <strong>InterficialFile</strong> file should be set in the form of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span>       <span class="c1"># matter index://start from 0</span>
+<span class="n">Value</span>
+<span class="n">Value</span>
+<span class="o">......</span>
+
+<span class="n">Index</span>       <span class="c1"># matter index:</span>
+<span class="n">Value</span>
+<span class="n">Value</span>
+<span class="o">......</span>
+</pre></div>
+</div>
+<p>Index: This command gives the index of the matter set in the <strong>PHONON</strong> file (start from “0”, &lt;=”1”)</p>
+<p>Value: This command gives the transmittance coefficient (&lt;=1) of each phonon band from this matter to the other matter.</p>
+</section>
+<section id="heatfile-not-mandatory">
+<h4>4. HeatFile (not mandatory)<a class="headerlink" href="#heatfile-not-mandatory" title="Permalink to this heading"></a></h4>
+<p>The <strong>HeatFile</strong> file provides distribution of heat source.</p>
+<p>(1) <strong>HeatType</strong> = <strong>REGION</strong>
+The format in the <strong>HeatFile</strong> file should be set in the form of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Number</span>      <span class="c1">#Number of Geometry #GeometryIndex HeatSourceValue:</span>
+<span class="n">Index</span>  <span class="n">Value</span>
+<span class="n">Index</span>  <span class="n">Value</span>
+<span class="o">......</span>
+</pre></div>
+</div>
+<p>Number: the total number of geometry.</p>
+<p>Index: the index of each geometry (starts from “1”).</p>
+<p>Value: the value of uniform heat source in this geometry.</p>
+<p>(2) <strong>HeatType</strong> = <strong>COORDINATE</strong></p>
+<p>The format in the HeatFile file should be set in the form of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">Nodes</span><span class="p">:</span>         <span class="n">Number</span> 
+<span class="n">coordinateX</span>    <span class="n">coordinateY</span>   <span class="n">coordinateZ</span>     <span class="n">Value</span>
+<span class="n">coordinateX</span>    <span class="n">coordinateY</span>   <span class="n">coordinateZ</span>     <span class="n">Value</span>
+<span class="o">......</span>
+</pre></div>
+</div>
+<p>Number: the total number of specified heat source nodes.</p>
+<p>coordinateX: x coordinates of each specified heat source node.</p>
+<p>coordinateY: y coordinates of each specified heat source node (needed only when <strong>DimensionGeometry</strong> = 2 or 3).</p>
+<p>coordinateZ: z coordinates of each specified heat source node (needed only when <strong>DimensionGeometry</strong> = 3).</p>
+<p>Value: the value of heat source at each node.</p>
+</section>
+<section id="initialtemperature-not-mandatory">
+<h4>5. InitialTemperature  (not mandatory)<a class="headerlink" href="#initialtemperature-not-mandatory" title="Permalink to this heading"></a></h4>
+<p>The <strong>InitialTemperature</strong> file provides distribution of initial temperature. The format in the <strong>InitialTemperature</strong> file should be set in the form of:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">Nodes</span><span class="p">:</span>         <span class="n">Number</span> 
+<span class="n">coordinateX</span>    <span class="n">coordinateY</span>   <span class="n">coordinateZ</span>     <span class="n">Value</span>
+<span class="n">coordinateX</span>    <span class="n">coordinateY</span>   <span class="n">coordinateZ</span>     <span class="n">Value</span>
+<span class="o">......</span>
+</pre></div>
+</div>
+<p>Number: the total number of specified initial temperature nodes.</p>
+<p>coordinateX: x coordinates of each specified initial temperature node.</p>
+<p>coordinateY: y coordinates of each specified initial temperature node (needed only when DimensionGeometry = 2 or 3).</p>
+<p>coordinateZ: z coordinates of each specified initial temperature node (needed only when DimensionGeometry = 3).</p>
+<p>Value: the value of initial temperature at each node.</p>
+</section>
+</section>
+</section>
+<section id="output">
+<h2>4.3 Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
+<p><strong>Temperature.dat</strong>:</p>
+<p>This file presents the temperature at the center of each cell.</p>
+<p>The format is</p>
+<p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">Y</span> <span class="pre">Z</span> <span class="pre">Temperature</span></code></p>
+<p><strong>HeatFlux.dat</strong>:</p>
+<p>This file provides the heat flux vector at the center of each cell.</p>
+<p>The format is</p>
+<p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">Y</span> <span class="pre">Z</span> <span class="pre">HeatFlux_x</span> <span class="pre">HeatFlux_y</span> <span class="pre">HeatFlux_z</span></code></p>
+<p><strong>TempLattice.dat</strong>:</p>
+<p>This file provides the lattice temperature at the center of each cell.</p>
+<p>The format is</p>
+<p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">Y</span> <span class="pre">Z</span> <span class="pre">LatticeTemperature</span></code></p>
+<p><strong>Result.vtk</strong>:</p>
+<p>This file contains temperature and heat flux values obtained from BTE in the vtu format, which can be visualized using Paraview (<a class="reference external" href="www.paraview.org">www.paraview.org</a>) for graphical representation.</p>
+<p><strong>Result_macro.vtk (only for steady-state)</strong>:</p>
+<p>This file contains temperature and heat flux values obtained from heat diffusion equation in the vtu format, which can be visualized using Paraview (<a class="reference external" href="www.paraview.org">www.paraview.org</a>) for graphical representation.</p>
+<p><strong>TTG.dat (only for transient)</strong>:</p>
+<p>This file provides temperature change with time increasing in TTG simulation.</p>
+<p>The format is</p>
+<p><code class="docutils literal notranslate"><span class="pre">Time</span>&#160; <span class="pre">Temperature</span></code></p>
+<p><strong>TDTR.dat (only for transient)</strong>:</p>
+<p>This file provides average temperature at top change with a time step increasing in TDTR simulation.</p>
+<p>The format is</p>
+<p><code class="docutils literal notranslate"><span class="pre">Timestep</span>&#160; <span class="pre">Temperature</span></code></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="3. Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="5. Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Hua Bao&#39;s group.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
