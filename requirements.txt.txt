@@ -1,11 +1,8 @@
 # markdown suport
-recommonmark
+recommonmark==0.7.1
 
 # markdown table suport
-sphinx-markdown-tables
-
-#emoji
-sphinxemoji
+sphinx-markdown-tables==0.0.17
 
 # theme default rtd
 
